@@ -1,0 +1,30 @@
+body{
+background-color: #232323;
+color: white;
+}
+
+.square{
+	width: 30%;
+	
+	padding-bottom: 30%;
+	float: left;
+	margin: 1.6px;
+	border-radius: 25px;
+}
+
+.container{
+margin: 0 auto;
+max-width: 600px;
+
+}
+
+#striker{
+	text-align: center;
+	background-color: white;
+	color: black;
+}
+
+h1{
+	padding: 20px;
+
+}
