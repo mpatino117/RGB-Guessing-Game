@@ -22,9 +22,15 @@ max-width: 600px;
 	text-align: center;
 	background-color: white;
 	color: black;
+	height: 30px;
 }
 
 h1{
 	padding: 20px;
+}
+
+.selected{
+	background-color: blue;
+	color: white;
 
 }

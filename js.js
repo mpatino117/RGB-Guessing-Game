@@ -1,3 +1,4 @@
+var numbofSquares = 6;
 var colors = generateRandomColor(6);
 var squares = document.querySelectorAll(".square");
 var pickedColor = randomPickColor();
@@ -5,9 +6,48 @@ var colorDisplay = document.getElementById("colorDisplay");
 var message = document.getElementById("message");
 var h1 = document.querySelector("h1");
 var resetButton = document.querySelector("#reset");
+var easyBtn = document.getElementById("easyBtn");
+var hardBtn = document.getElementById("hardBtn");
+
+easyBtn.addEventListener('click', function(){
+	hardBtn.classList.remove("selected");
+	easyBtn.classList.add("selected");
+	numbofSquares = 3;
+	colors = generateRandomColor(numbofSquares);
+	colorDisplay.textContent = pickedColor;
+
+	for (var i = 0; i < squares.length; i++) {
+		if (colors[i]) {
+			squares[i].style.background = colors[i];
+
+		} else {
+			squares[i].style.display="none";
+		} 
+	}
+});
+
+hardBtn.addEventListener('click', function(){
+	easyBtn.classList.remove("selected");
+	hardBtn.classList.add("selected");
+	colorDisplay.textContent = pickedColor;
+	numbofSquares = 6;
+	colors = generateRandomColor(numbofSquares);
+	colorDisplay.textContent = pickedColor;
+
+	for (var i = 0; i < squares.length; i++) {
+		
+			squares[i].style.background = colors[i];
+			squares[i].style.display="block";
+		
+		
+	}
+
+
+});
+
 
 resetButton.addEventListener("click", function(){
-colors = generateRandomColor(6);
+	colors = generateRandomColor(numbofSquares);
 // generate random colors
 pickedColor = randomPickColor();
 //picks a random color
@@ -17,8 +57,9 @@ for (var i = 0; i < squares.length; i++) {
 	squares[i].style.background = colors[i];
 }
 h1.style.background = "#232323"
-});
 
+});
+////////////
 colorDisplay.textContent = pickedColor;
 
 for (var i = 0; i <= squares.length; i++) {
@@ -37,7 +78,7 @@ for (var i = 0; i <= squares.length; i++) {
 		message.textContent = "Try Again";
 		resetButton.textContent = "Play Again!"
 	}
-	
+
 });
 
 }
@@ -61,7 +102,7 @@ function generateRandomColor(num){
 	//loop through array 
 	for (var i = 0; i < num; i++) {
 		// push random # into array 
-	arr.push(rgbRandom());
+		arr.push(rgbRandom());
 	}
 	return arr;
 }
