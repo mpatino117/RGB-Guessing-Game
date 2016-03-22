@@ -36,8 +36,8 @@ hardBtn.addEventListener('click', function(){
 
 	for (var i = 0; i < squares.length; i++) {
 		
-			squares[i].style.background = colors[i];
-			squares[i].style.display="block";
+		squares[i].style.background = colors[i];
+		squares[i].style.display="block";
 		
 		
 	}
@@ -56,7 +56,7 @@ colorDisplay.textContent = pickedColor;
 for (var i = 0; i < squares.length; i++) {
 	squares[i].style.background = colors[i];
 }
-h1.style.background = "#232323"
+h1.style.background = "#e91e63"
 
 });
 ////////////
