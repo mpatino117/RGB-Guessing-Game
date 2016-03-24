@@ -1,9 +1,9 @@
 body{
-background-color: #232323;
-margin: 0;
-font-family: "Avenir";
-font-weight: normal;
-text-transform: uppercase;
+	background-color: #232323;
+	margin: 0;
+	font-family: "Avenir";
+	font-weight: normal;
+	text-transform: uppercase;
 }
 
 .square{
@@ -18,13 +18,13 @@ text-transform: uppercase;
 }
 
 .container{
-margin: 0 auto;
-max-width: 600px;
+	margin: 0 auto;
+	max-width: 600px;
 
 }
 
 #striker{
-		text-align: center;
+	text-align: center;
 
 	background-color: white;
 	color: black;
@@ -32,7 +32,7 @@ max-width: 600px;
 }
 
 h1{
-		text-align: center;
+	text-align: center;
 	line-height: 1.1;
 	padding: 20 0 20 0;
 	
@@ -48,7 +48,7 @@ h1{
 }
 
 #colorDisplay{
-font-size: 200%;
+	font-size: 200%;
 }
 
 #message{
@@ -67,6 +67,7 @@ button{
 	letter-spacing: 1px;
 	font-size: inherit;
 	transition: all 0.3;
+	outline: none;
 }
 
 button:hover{
